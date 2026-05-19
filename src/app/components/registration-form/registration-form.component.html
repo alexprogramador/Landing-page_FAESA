@@ -1,0 +1,40 @@
+<section id="inscricao" class="form-section">
+  <div class="form-container">
+    <h2>Ficou interessado? Garanta sua vaga!</h2>
+    <p>Preencha os campos abaixo e nossa equipe entrará em contato.</p>
+
+    <div *ngIf="sucesso" class="alert-success">
+      ✓ Cadastro realizado com sucesso! (Dados exibidos no Console do Desenvolvedor)
+    </div>
+
+    <form [formGroup]="formInscricao" (ngSubmit)="enviar()">
+      <div class="form-group">
+        <label for="nome">Nome Completo *</label>
+        <input id="nome" type="text" formControlName="nome" placeholder="Digite seu nome">
+        <span *ngIf="formInscricao.get('nome')?.touched && formInscricao.get('nome')?.errors?.['required']" class="error">O nome é obrigatório.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail *</label>
+        <input id="email" type="email" formControlName="email" placeholder="seuemail@faesa.edu.br">
+        <span *ngIf="formInscricao.get('email')?.touched && formInscricao.get('email')?.errors?.['email']" class="error">Insira um e-mail válido.</span>
+        <span *ngIf="formInscricao.get('email')?.touched && formInscricao.get('email')?.errors?.['required']" class="error">O e-mail é obrigatório.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="telefone">Telefone *</label>
+        <input id="telefone" type="text" formControlName="telefone" placeholder="Ex: 27999998888 (somente números)">
+        <span *ngIf="formInscricao.get('telefone')?.touched && formInscricao.get('telefone')?.errors?.['required']" class="error">O telefone é obrigatório.</span>
+        <span *ngIf="formInscricao.get('telefone')?.touched && formInscricao.get('telefone')?.errors?.['pattern']" class="error">Insira um telefone válido com DDD (10 ou 11 dígitos).</span>
+      </div>
+
+      <div class="form-group">
+        <label for="mensagem">Mensagem *</label>
+        <textarea id="mensagem" formControlName="mensagem" rows="4" placeholder="Por que você quer fazer este curso?"></textarea>
+        <span *ngIf="formInscricao.get('mensagem')?.touched && formInscricao.get('mensagem')?.errors?.['required']" class="error">A mensagem é obrigatória.</span>
+      </div>
+
+      <button type="submit" [disabled]="formInscricao.invalid" class="submit-btn">Enviar Inscrição</button>
+    </form>
+  </div>
+</section>

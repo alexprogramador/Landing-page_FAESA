@@ -1,0 +1,51 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%; /* Diminuí levemente o padding vertical para compensar a altura da imagem */
+  background-color: #0b2545;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Nova classe para controlar o tamanho e alinhamento da logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 45px; /* Define uma altura ideal para não quebrar a barra de navegação */
+  width: auto;  /* Mantém a proporção original da imagem */
+  object-fit: contain;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f37021;
+}
+
+.cta-btn {
+  background-color: #f37021;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #d65a12;
+}

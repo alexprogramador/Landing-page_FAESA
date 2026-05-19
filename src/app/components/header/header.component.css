@@ -1,0 +1,77 @@
+/* --- Estilos Gerais do Cabeçalho --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%; /* Ajuste fino de padding para compensar o ícone */
+  background-color: #0b2545; /* Azul Escuro */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* --- NOVA Formatação do Ícone e Wrapper --- */
+.logo-wrapper {
+  display: flex;
+  align-items: center; /* Garante alinhamento vertical perfeito */
+  gap: 15px; /* Espaçamento confortável entre o ícone e o texto */
+}
+
+.logo-icon {
+  height: 45px; /* Altura proporcional ao menu */
+  width: auto; /* Mantém a proporção original da imagem */
+  display: block;
+}
+
+/* --- Estilos do Texto da Logo (Preservados) --- */
+.logo {
+  font-size: 1.8rem; /* Letra maior conforme solicitado anteriormente */
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  white-space: nowrap; /* Evita quebra de linha */
+}
+
+.highlight {
+  color: #f37021; /* Laranja FAESA */
+}
+
+/* --- Estilos de Navegação (Preservados) --- */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 25px; /* Espaçamento confortável */
+  font-weight: 500;
+  font-size: 1.1rem; /* Letra maior conforme solicitado */
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f37021; /* Laranja no hover */
+}
+
+/* --- Estilos do Botão CTA (Preservados) --- */
+.cta-btn {
+  background-color: #f37021; /* Laranja FAESA */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.05rem; /* Letra maior conforme solicitado */
+  white-space: nowrap;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: #d65a12; /* Laranja mais escuro no hover */
+  transform: translateY(-2px); /* Efeito suave de levitação */
+}
